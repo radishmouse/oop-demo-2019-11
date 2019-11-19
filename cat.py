@@ -21,6 +21,16 @@
 # bundling related data (like a dictionary)
 # with the functions that modify that data
 
+# Encapsulation - hiding the details about how something is done (usually inside of methods).
+# Encapsulation, alternate defintion - bundling related data along with functions that use and modify that data.
+
+# Inheritance - making specialized classes based on other classes.
+
+# Polymorphism - methods can interact with lots of different kinds of objects, and it doesn't care what Class created it.
+
+# Composition - not stuffing everything into a single class. Instead make classes that help other classes. Create specialized objects that cooperate with each other.
+
+
 from random import randint
 
 class Cat:
@@ -32,6 +42,17 @@ class Cat:
         self.friendliness = friendliness
         self.happiness = happiness
         self.cuddle_power = cuddle_power
+        self.toys = []
+
+    def recieve_toy(self, toy):
+        # You can add new properties to an object in any method
+        # not just __init__()
+        # self.toy = toy
+        self.toys.append(toy)
+
+    def play_with_toy(self):
+        print(f"{self.name} plays with {self.toy.name}")        
+        self.happiness += self.toy.quality
 
     def greet(self, whom):
         print(f"Hello, I am {self.name}. Nice to meet you, {whom.name}!")
