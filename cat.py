@@ -27,7 +27,7 @@ class Cat:
     # In __init__ python allows you to
     # refer to the object as it's being created!
     # Cool! You can customize that cat. Prrrrrr....
-    def __init__(self, new_name, friendliness=0.5, happiness=10, cuddle_power=1):
+    def __init__(self, new_name, friendliness=0.5, happiness=10, cuddle_power=3):
         self.name = new_name
         self.friendliness = friendliness
         self.happiness = happiness
@@ -48,3 +48,4 @@ milla = Cat("Milla")
 oakley = Cat("Oakley") 
 # Use the class to create a new Cat "instance"
 # "Instance" is another word for "object"
+
